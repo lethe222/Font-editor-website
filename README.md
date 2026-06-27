@@ -37,7 +37,7 @@ npm run build
 ## 支持格式
 
 - 输入：`TTF`、`OTF`、`WOFF`
-- 输出：`OTF`、`TTF`、`WOFF`
+- 输出：`OTF`、`TTF`
 
 ## 说明
 
