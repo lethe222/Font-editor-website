@@ -27,6 +27,8 @@ import {
 import { Card, ErrorBanner, StepBadge, StepLabel } from "./shared";
 import type { FontSubsetModel } from "./useFontSubset";
 
+const HOME_PAGE_URL = "/";
+
 export function FontSubsetView({
   phase,
   isLoading,
@@ -175,6 +177,67 @@ export function FontSubsetView({
           />
         )}
       </main>
+
+      <a
+        href={HOME_PAGE_URL}
+        title="返回首页"
+        style={{
+          position: "fixed",
+          right: 24,
+          bottom: 24,
+          zIndex: 60,
+          width: 44,
+          height: 44,
+          borderRadius: 16,
+          background: "#3370FF",
+          boxShadow: "0 10px 24px rgba(51,112,255,0.28)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          transition: "transform 0.18s ease",
+        }}
+        onMouseEnter={(event) => {
+          event.currentTarget.style.transform = "scale(1.1)";
+        }}
+        onMouseLeave={(event) => {
+          event.currentTarget.style.transform = "scale(1)";
+        }}
+      >
+        <div
+          style={{
+            width: 24,
+            height: 24,
+            borderRadius: 6,
+            background: "#3370FF",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <rect x="1" y="1" width="5" height="5" rx="1.5" fill="white" />
+            <rect
+              x="8"
+              y="1"
+              width="5"
+              height="5"
+              rx="1.5"
+              fill="white"
+              fillOpacity="0.6"
+            />
+            <rect
+              x="1"
+              y="8"
+              width="5"
+              height="5"
+              rx="1.5"
+              fill="white"
+              fillOpacity="0.6"
+            />
+            <rect x="8" y="8" width="5" height="5" rx="1.5" fill="white" />
+          </svg>
+        </div>
+      </a>
 
       <style>{`
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
